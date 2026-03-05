@@ -13,7 +13,7 @@
 4. load uboot onto the router:
     1. In another terminal, start: `bash -c 'while true; do ip link show; usleep 500; done'` to see the state of your ethernet interface
     2. connect power to the router
-    3. when you see 'UP' next to your ethernet interface in the other terminal run `eva_ramboot --offset 0x85000000 --ip 192.168.178.1 --image uboot-fritz7520.bin`
+    3. when you see 'UP' next to your ethernet interface in the other terminal run `eva_ramboot --offset 0x85000000 192.168.178.1 uboot-fritz7520.bin`
 
 5. Assign yourself ip address 192.168.1.70/24 (like in step 2)
     - use `sudo ip addr del 192.168.178.10/24 dev <interface>` to remove the previous pre-uboot address
